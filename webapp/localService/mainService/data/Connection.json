@@ -2,7 +2,7 @@
     {
         "AirlineID": "AA",
         "ConnectionID": "15",
-        "AirlineName": "American Airlines IncXXX.",
+        "AirlineName": "American Airlines Inc.",
         "ConnectionTitle": "AA-15",
         "DepartureAirport": "JFK",
         "DepartureAirportName": "John F. Kennedy International Airport",

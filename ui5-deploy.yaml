@@ -4,23 +4,19 @@ specVersion: "3.1"
 metadata:
   name: travelapp.readonly
 type: application
+resources:
+  configuration:
+    propertiesFileSourceEncoding: UTF-8
 builder:
   resources:
     excludes:
       - /test/**
       - /localService/**
   customTasks:
-    - name: deploy-to-abap
+    - name: ui5-task-zipper
       afterTask: generateCachebusterInfo
       configuration:
-        target:
-          destination: abap-cloud-default_abap-trial-d378e834trial-dev
-          url: https://94112c48-db0e-4021-b981-77ca818c73cb.abap.ap21.hana.ondemand.com/
-          scp: true
-        app:
-          name: ZAETRAVEL001
-          description: Travel Application - Read Only
-          package: ZAE_TRAVELAPPS_READONLY
-          transport: ''
-        exclude:
-          - /test/
+        archiveName: travelappreadonly
+        relativePaths: true
+        additionalFiles:
+          - xs-app.json
